@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+
+{% block title %}
+Dashboard
+{% endblock %}
+
+
+{% block content %}
+
+<div class="container">
+
+    <section class="dashboard-header">
+
+        <span class="badge">
+            Protected Area
+        </span>
+
+        <h1>
+            Welcome, {{ username }} 👋
+        </h1>
+
+        <p>
+            You successfully logged in using
+            Flask Session.
+        </p>
+
+    </section>
+
+
+    <div class="dashboard-grid">
+
+        <div class="dashboard-card">
+
+            <span>👤</span>
+
+            <h3>
+                User
+            </h3>
+
+            <p>
+                {{ username }}
+            </p>
+
+        </div>
+
+
+        <div class="dashboard-card">
+
+            <span>📧</span>
+
+            <h3>
+                Email
+            </h3>
+
+            <p>
+                {{ email }}
+            </p>
+
+        </div>
+
+
+        <div class="dashboard-card">
+
+            <span>🔐</span>
+
+            <h3>
+                Session Status
+            </h3>
+
+            <p class="status">
+                Active
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="center-button">
+
+        <a href="{{ url_for('session_info') }}"
+           class="btn blue">
+            View Session Information
+        </a>
+
+    </div>
+
+</div>
+
+{% endblock %}

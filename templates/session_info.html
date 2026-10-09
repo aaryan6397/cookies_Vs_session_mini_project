@@ -1,0 +1,9 @@
+<p>User: {{ session.get('username', 'Guest') }}</p>
+<p>Email: {{ session.get('email', 'Not logged in') }}</p>
+<p>Session Status: 
+    {% if session.get('logged_in') %}
+        <span style="color: green;">Active</span>
+    {% else %}
+        <span style="color: red;">Inactive</span>
+    {% endif %}
+</p>
